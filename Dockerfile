@@ -1,6 +1,9 @@
 FROM arm32v6/alpine:latest
 
-RUN apk add --no-cache curl perl
+RUN apk add --no-cache \
+	curl \
+	perl \
+	tzdata
 
 WORKDIR /app
 ADD https://fhem.de/fhem-5.9.tar.gz .
