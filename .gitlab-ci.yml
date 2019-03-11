@@ -2,7 +2,7 @@ build_and_deploy:
   image: docker:stable
   stage: build
   script:
-    - docker image build -t jaedle/fhem-arm32v7:latest .
+    - docker image build --no-cache -t jaedle/fhem-arm32v7:latest .
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker image push jaedle/fhem-arm32v7:latest
   only:
