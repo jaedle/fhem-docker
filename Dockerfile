@@ -1,4 +1,4 @@
-FROM arm32v6/alpine:latest
+FROM alpine:3.12
 
 RUN apk add --no-cache \
 	curl \
