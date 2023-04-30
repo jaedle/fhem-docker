@@ -6,7 +6,7 @@ RUN apk add --no-cache \
 	tzdata
 
 WORKDIR /app
-ADD https://fhem.de/fhem-5.9.tar.gz .
+ADD http://fhem.de/fhem-6.2.tar.gz .
 RUN tar -xzf fhem*.tar.gz && \
 	rm -rf fhem*.tar.gz && \
 	mv fhem* fhem
